@@ -50,7 +50,9 @@ namespace ESDemo
 
         public void Get2Arr()
         {
-            var result = _Es.Search<gb2>(t => t.Index("fafagb").Query(q => q.Match(m => m.Field(f => f.arr).Query("12737123"))));
+          //  var result = _Es.Search<gb2>(t => t.Index("fafagb").Query(q => q.Match(m => m.Field(f => f.arr).Query("12737123"))));
+
+            var result2 = _Es.Search<ExerciseStructIndex>(t => t.Index("exercisestructindex").Query(q => q.Match(m => m.Field(f => f.ExerciseId).Query("3032247540052"))));
         }
     
 
